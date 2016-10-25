@@ -34,7 +34,7 @@ af4_right_arm = right_columns[15]
 # Obtain lef arm data channels
 left_columns = defaultdict(list)
 
-with open('DW left arm-stationary and left arm-18.10.16.13.35.33.csv') as csv_file_left:
+with open('EEG_left_data.csv') as csv_file_left:
     raw_eeg_L = csv.reader(csv_file_left, delimiter=',')
     raw_eeg_L.next()
     for row in raw_eeg_L:
@@ -42,10 +42,10 @@ with open('DW left arm-stationary and left arm-18.10.16.13.35.33.csv') as csv_fi
             left_columns[i].append(v)
 
 
-af3_left_arm = left_columns[2]
-f3_left_arm = left_columns[4]
-f4_left_arm = left_columns[13]
-af4_left_arm = left_columns[15]
+f3_left_arm = left_columns[0]
+af3_left_arm = left_columns[1]
+f4_left_arm = left_columns[2]
+af4_left_arm = left_columns[3]
 
 columns = defaultdict(list)
 with open('EEG_use_data.csv') as csv_file:
